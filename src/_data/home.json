@@ -1,0 +1,126 @@
+{
+  "hero": {
+    "eyebrow": "EVERYONE DESERVES HOUSING",
+    "title": "A new vision for shelter.",
+    "summary": "Everyone Deserves Housing brings outreach, shelter, healthcare, behavioral health, and housing pathways into one practical, more human system.",
+    "primaryCta": {
+      "label": "Read the model",
+      "href": "#model"
+    },
+    "secondaryCta": {
+      "label": "See the workflow",
+      "href": "#workflow"
+    },
+    "highlights": [
+      "24/7 low-barrier access and stabilization",
+      "Integrated medical and behavioral healthcare",
+      "Triage into the right shelter and housing pathway"
+    ]
+  },
+  "mission": "Care should feel immediate, coordinated, and human.",
+  "rationale": [
+    "People living unsheltered need immediate, on-site access to care rather than referral-only pathways.",
+    "Behavioral health and substance use treatment are more effective when they are co-located and continuous.",
+    "Shelter environments can re-trigger trauma and weaken engagement.",
+    "Staff experience secondary trauma and need safer, more sustainable environments and workflows."
+  ],
+  "guidingPrinciples": [
+    {
+      "title": "Dignity and belonging",
+      "text": "Spaces and services should feel respectful, safe, and genuinely welcoming."
+    },
+    {
+      "title": "Care where people are",
+      "text": "Street-level homelessness calls for immediate support, not a chain of referrals."
+    },
+    {
+      "title": "Integrated response",
+      "text": "Shelter, healthcare, behavioral health, and housing pathways work better together."
+    },
+    {
+      "title": "Equity in design and outcomes",
+      "text": "The model should work for people most affected by poverty, trauma, and exclusion."
+    }
+  ],
+  "programElements": [
+    {
+      "title": "Open door",
+      "text": "24/7 access, basic needs, and immediate stabilization without preconditions."
+    },
+    {
+      "title": "Care on site",
+      "text": "Medical, behavioral health, and substance use support are part of the core response."
+    },
+    {
+      "title": "Recovery pathways",
+      "text": "Support people across a full continuum instead of forcing one fixed path."
+    },
+    {
+      "title": "Trauma-informed spaces",
+      "text": "Design the environment and the workflow to support both clients and staff."
+    },
+    {
+      "title": "Faster housing moves",
+      "text": "Use triage and coordinated planning to connect people to the right next step sooner."
+    }
+  ],
+  "workflow": [
+    {
+      "step": "1. Engagement",
+      "text": "People living unsheltered connect through outreach, walk-in access, or coordinated referral."
+    },
+    {
+      "step": "2. Stabilization hub",
+      "text": "The hub offers immediate basic needs, short-term shelter, assessment, and integrated medical and behavioral healthcare."
+    },
+    {
+      "step": "3. Triage",
+      "text": "A multidisciplinary team identifies the most appropriate next setting based on health, behavioral health, and stabilization needs."
+    },
+    {
+      "step": "4. Specialized placement",
+      "text": "Clients move into the shelter environment or treatment path that best fits the current moment, such as low-barrier, senior-supportive, or recovery-oriented care."
+    },
+    {
+      "step": "5. Housing transition",
+      "text": "The system works toward rapid rehousing or supportive housing as quickly and safely as possible."
+    }
+  ],
+  "designPrinciples": [
+    {
+      "title": "Nested layers",
+      "text": "People need choices around privacy, noise, and social connection."
+    },
+    {
+      "title": "Identity anchors",
+      "text": "The setting should reflect community, culture, and personal dignity."
+    },
+    {
+      "title": "Workforce sustainability",
+      "text": "Staff support is part of care quality, not an extra."
+    }
+  ],
+  "partnerships": [
+    "Primary care",
+    "Behavioral health",
+    "Substance use disorder services",
+    "Culturally responsive services",
+    "Palliative care",
+    "Workforce development",
+    "COPES assessments and home care services"
+  ],
+  "outcomes": [
+    "Reduced barriers to care",
+    "Faster stabilization and engagement",
+    "Stronger recovery pathways",
+    "Better alignment between care setting and client need",
+    "Quicker movement into permanent housing",
+    "More sustainable staff experience"
+  ],
+  "startupPlan": [
+    "Secure a fiscal sponsor for 6 to 12 months.",
+    "Form the nonprofit and complete core legal setup.",
+    "Build healthcare and treatment-provider relationships.",
+    "Develop 2 to 3 enhanced shelters within 18 months of startup."
+  ]
+}
