@@ -64,28 +64,45 @@
       "text": "Use triage and coordinated planning to connect people to the right next step sooner."
     }
   ],
-  "workflow": [
-    {
-      "step": "1. Engagement",
-      "text": "People living unsheltered connect through outreach, walk-in access, or coordinated referral."
+  "pathways": {
+    "intro": "The model starts with one stabilization hub for assessment and triage, then routes each person into the tailored shelter or housing path that best fits their needs.",
+    "hub": {
+      "title": "Stabilization hub",
+      "text": "A short-term front door for immediate basic needs, shelter, assessment, and multidisciplinary triage before placement."
     },
-    {
-      "step": "2. Stabilization hub",
-      "text": "The hub offers immediate basic needs, short-term shelter, assessment, and integrated medical and behavioral healthcare."
-    },
-    {
-      "step": "3. Triage",
-      "text": "A multidisciplinary team identifies the most appropriate next setting based on health, behavioral health, and stabilization needs."
-    },
-    {
-      "step": "4. Specialized placement",
-      "text": "Clients move into the shelter environment or treatment path that best fits the current moment, such as low-barrier, senior-supportive, or recovery-oriented care."
-    },
-    {
-      "step": "5. Housing transition",
-      "text": "The system works toward rapid rehousing or supportive housing as quickly and safely as possible."
-    }
-  ],
+    "services": [
+      {
+        "slug": "medical-respite",
+        "title": "Medical respite",
+        "kind": "Shelter",
+        "text": "A shelter setting for people who need a safer place to recover and stabilize while receiving coordinated medical support."
+      },
+      {
+        "slug": "addiction-recovery",
+        "title": "Addiction recovery",
+        "kind": "Shelter",
+        "text": "A recovery-oriented shelter path with substance use and behavioral health support built into the care model."
+      },
+      {
+        "slug": "low-barrier",
+        "title": "Low barrier",
+        "kind": "Shelter",
+        "text": "A low-barrier shelter option that reduces entry requirements and keeps access immediate, practical, and welcoming."
+      },
+      {
+        "slug": "senior-supportive",
+        "title": "Senior supportive",
+        "kind": "Shelter",
+        "text": "A senior-focused shelter setting with supportive and palliative care capacity for older adults with higher daily needs."
+      },
+      {
+        "slug": "rapid-rehousing",
+        "title": "Rapid rehousing",
+        "kind": "Housing",
+        "text": "A scattered-site housing pathway for people who can quickly regain stability with coordinated transition support."
+      }
+    ]
+  },
   "designPrinciples": [
     {
       "title": "Nested layers",
@@ -122,5 +139,9 @@
     "Form the nonprofit and complete core legal setup.",
     "Build healthcare and treatment-provider relationships.",
     "Develop 2 to 3 enhanced shelters within 18 months of startup."
-  ]
+  ],
+  "contact": {
+    "label": "Email us",
+    "email": "info@edh-wa.org"
+  }
 }

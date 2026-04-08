@@ -119,31 +119,37 @@ description: A proposed nonprofit model integrating shelter, healthcare, behavio
 </section>
 
 <section class="section section--dark" id="workflow">
-  <div class="shell workflow-layout">
-    <div>
-      <p class="section-label">Workflow</p>
-      <h2>Start with stabilization. Then route to the right fit.</h2>
-      <p class="section-copy section-copy--light">The hub-and-spoke approach creates a shared front door, then connects people to the shelter setting, treatment path, or housing pathway that fits the moment.</p>
-      <ol class="timeline">
-        {% for item in home.workflow %}
-          <li class="timeline__item">
-            <h3>{{ item.step }}</h3>
+  <div class="shell workflow-layout workflow-layout--pathways">
+    <div class="workflow-copy workflow-copy--pathways" style="max-width:50rem;">
+      <p class="section-label">Pathways</p>
+      <h2 style="max-width:100%">One hub. Tailored services.</h2>
+      <p class="section-copy section-copy--light">{{ home.pathways.intro }}</p>
+    </div>
+    <article class="timeline__item timeline__item--hub timeline__item--hub-band">
+      <p class="pathway-kicker">Shared entry point</p>
+      <h3>{{ home.pathways.hub.title }}</h3>
+      <p>{{ home.pathways.hub.text }}</p>
+    </article>
+    <div class="workflow-detail-grid">
+      <aside class="workflow-visuals workflow-visuals--diagram">
+        <figure class="image-card image-card--tone-white workflow-figure">
+          <div class="workflow-figure__inner">
+            <img src="/docs-assets/Pathways.png" alt="Diagram showing a stabilization hub with triage branching to medical respite, addiction recovery, low barrier, senior supportive, and rapid rehousing." loading="lazy">
+          </div>
+        </figure>
+      </aside>
+      <div class="workflow-copy workflow-copy--list">
+      <ul class="pathway-list">
+        {% for item in home.pathways.services %}
+          <li class="pathway-list__item">
+            <span class="pathway-list__label">{{ item.title }}</span>
+            <span class="pathway-list__meta">{{ item.kind }}</span>
             <p>{{ item.text }}</p>
           </li>
         {% endfor %}
-      </ol>
+      </ul>
+      </div>
     </div>
-    <aside class="workflow-visuals">
-      <figure class="image-card image-card--tone-orange">
-        <img src="/docs-assets/triage-branching-diagram.svg" alt="Branching diagram representing triage decisions." loading="lazy">
-      </figure>
-      <figure class="image-card image-card--tone-blue">
-        <img src="/docs-assets/triage-connections-network.svg" alt="Network diagram representing coordinated pathways." loading="lazy">
-      </figure>
-      <figure class="image-card image-card--tone-green">
-        <img src="/docs-assets/triage-suburban-scene.svg" alt="Illustration representing shelter placement options." loading="lazy">
-      </figure>
-    </aside>
   </div>
 </section>
 
@@ -214,6 +220,13 @@ description: A proposed nonprofit model integrating shelter, healthcare, behavio
             <li>{{ item }}</li>
           {% endfor %}
         </ol>
+      </div>
+      <div class="contact-card">
+        <p class="section-label">{{ home.contact.label }}</p>
+        <a class="contact-card__link" href="mailto:{{ home.contact.email }}">
+          <img class="contact-card__icon" src="/docs-assets/email.svg" alt="" aria-hidden="true">
+          <span>{{ home.contact.email }}</span>
+        </a>
       </div>
     </div>
   </div>

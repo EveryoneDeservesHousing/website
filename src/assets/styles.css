@@ -120,10 +120,37 @@ img {
   gap: 0.9rem;
 }
 
+.site-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem 1.25rem;
+}
+
 .site-nav a {
   color: var(--muted);
   text-decoration: none;
   font-weight: 600;
+}
+
+.header-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid rgba(31, 54, 84, 0.1);
+  color: var(--brand-deep);
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.header-contact__icon {
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 auto;
 }
 
 .hero,
@@ -567,10 +594,39 @@ li {
   border-radius: var(--radius-md);
 }
 
+.timeline__item--hub {
+  margin-top: 2rem;
+}
+
 .timeline__item h3,
 .section--dark h2,
 .section--dark .section-copy {
   color: #fff;
+}
+
+.pathway-kicker {
+  margin: 0 0 0.65rem;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.workflow-layout--pathways {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+}
+
+.workflow-copy--pathways {
+  max-width: 42rem;
+}
+
+.workflow-detail-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.95fr) minmax(0, 1.05fr);
+  gap: 2rem;
+  align-items: start;
 }
 
 .workflow-visuals {
@@ -578,14 +634,80 @@ li {
   gap: 1rem;
 }
 
-.workflow-visuals .image-card {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.08);
-  max-width: 22rem;
+.workflow-visuals--diagram {
+  align-self: center;
 }
 
-.workflow-visuals img {
-  background: #fff;
+.workflow-figure {
+  width: min(100%, 33rem);
+  margin: 0 auto 0 0;
+  padding: 2rem;
+  background: linear-gradient(180deg, rgba(4, 105, 205, 0.98), rgba(231, 239, 247, 0.94));
+  border-color: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 28px 60px rgba(10, 20, 32, 0.28);
+}
+
+.workflow-figure__inner {
+  padding: 1rem;
+  border-radius: calc(var(--radius-md) - 0.1rem);
+  background: rgba(255, 255, 255, 0.96) !important;
+}
+
+.workflow-figure img {
+  width: 100%;
+  display: block;
+  border-radius: 1.5rem;
+  background: transparent;
+}
+
+.timeline__item--hub-band {
+  margin-top: 0.25rem;
+}
+
+.pathway-list {
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+  margin: 1.25rem 0 0;
+  padding: 0;
+}
+
+.pathway-list__item {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.pathway-list__item:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.pathway-list__label,
+.pathway-list__meta {
+  display: inline-block;
+  margin: 0 0.5rem 0.5rem 0;
+}
+
+.pathway-list__label {
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.15rem;
+}
+
+.pathway-list__meta {
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.pathway-list__item p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
 }
 
 .image-card--tone-blue {
@@ -712,6 +834,35 @@ li {
   padding-left: 1.25rem;
 }
 
+.contact-card {
+  margin-top: 1rem;
+  padding: 1.1rem 1.4rem;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(31, 54, 84, 0.08);
+}
+
+.contact-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--ink);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.contact-card__icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex: 0 0 auto;
+}
+
+.contact-card__link:hover,
+.contact-card__link:focus-visible {
+  text-decoration: underline;
+}
+
 @media (max-width: 1080px) {
   .hero__grid,
   .intro-panel,
@@ -729,6 +880,18 @@ li {
 
   .reason-grid article:last-child {
     grid-column: span 2;
+  }
+
+  .workflow-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .workflow-copy--pathways {
+    max-width: 100%;
+  }
+
+  .workflow-figure {
+    margin: 0 auto;
   }
 }
 
@@ -748,6 +911,12 @@ li {
   }
 
   .site-header__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-header__actions {
+    width: 100%;
     flex-direction: column;
     align-items: flex-start;
   }
