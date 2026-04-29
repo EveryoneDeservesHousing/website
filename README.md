@@ -1,28 +1,20 @@
 # Everyone Deserves Housing Website
 
-Minimal Eleventy setup for a static nonprofit website.
+Static Bootstrap website for Everyone Deserves Housing.
 
-## Commands
+## Local preview
 
-- `npm install`
-- `npm start`
-- `npm run build`
+Open `src/index.html` in a browser. No build step is required.
 
 ## Structure
 
-- `src/_data/` holds site content and structured homepage data.
-- `src/_includes/base.njk` is the shared page layout.
-- `src/index.njk` renders the homepage from the data files.
-- `src/assets/styles.css` contains the current design system.
-- `docs/` preserves the original source material and extracted assets.
+- `src/index.html` is the live site.
+- `src/assets/` contains site CSS, JavaScript, images, and fonts.
+- `src/vendor/` contains Bootstrap and jQuery files used by the template navigation.
+- `src_11ty/` preserves the previous Eleventy version for reference.
+- `docs/` preserves the original source material and EDH image assets.
+- `temp_template/` preserves the original template for reference.
 
 ## Deployment
 
-This project builds to `_site/`, which can be deployed to GitHub Pages.
-
-If you use GitHub Pages with Actions:
-
-- push the repo to GitHub
-- set the default branch to `main`
-- in GitHub, configure Pages to use `GitHub Actions`
-- the workflow at `.github/workflows/deploy.yml` will build and publish `_site`
+The GitHub Pages workflow copies `src/` into `_site/`, then publishes that static folder.
