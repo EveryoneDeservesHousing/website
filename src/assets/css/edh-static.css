@@ -27,6 +27,10 @@ body {
   color: var(--edh-ink);
 }
 
+body.email-list-popup-open {
+  overflow: hidden;
+}
+
 .main-banner .right-image::after,
 .main-banner .header-text::after,
 section.our-courses::before,
@@ -695,6 +699,35 @@ section.featured-product .info-item.center-info {
   box-shadow: 0 10px 24px rgba(16, 36, 59, 0.06);
 }
 
+.fiscal-sponsor-section.edh-section {
+  margin-top: 0;
+}
+
+.fiscal-sponsor-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+  padding: 34px;
+  border: 1px solid var(--edh-line);
+  border-radius: 15px;
+  background: var(--edh-surface-3);
+  box-shadow: var(--edh-shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.fiscal-sponsor-logo:hover,
+.fiscal-sponsor-logo:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 22px 52px rgba(16, 36, 59, 0.16);
+}
+
+.fiscal-sponsor-logo img {
+  display: block;
+  width: min(100%, 320px);
+  height: auto;
+}
+
 .impact-panel {
   padding: 34px;
   border: 1px solid var(--edh-line);
@@ -1090,6 +1123,77 @@ section.page-heading.edh-page-heading .header-text p {
   white-space: nowrap;
 }
 
+.email-list-popup[hidden] {
+  display: none;
+}
+
+.email-list-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  padding: 24px;
+}
+
+.email-list-popup__backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(16, 36, 59, 0.62);
+  backdrop-filter: blur(5px);
+}
+
+.email-list-popup__dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  max-width: calc(100vw - 48px);
+  max-height: min(760px, calc(100vh - 48px));
+  max-height: min(760px, calc(100dvh - 48px));
+  overflow: auto;
+  padding: 34px 28px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  background: var(--edh-surface-3);
+  box-shadow: 0 28px 90px rgba(4, 18, 34, 0.34);
+  transform: translate(-50%, -50%);
+}
+
+.email-list-popup__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(31, 54, 84, 0.12);
+  border-radius: 50%;
+  background: #fff;
+  color: var(--edh-blue);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.email-list-popup__close:hover,
+.email-list-popup__close:focus {
+  background: var(--edh-blue);
+  color: #fff;
+}
+
+.email-list-popup givebutter-widget {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+.email-list-popup iframe {
+  max-width: 100%;
+}
+
 .gratitude-section.edh-section {
   margin-top: 0;
 }
@@ -1152,6 +1256,12 @@ section.page-heading.edh-page-heading .header-text p {
   .page-cta .white-button {
     margin-top: 24px;
     text-align: left;
+  }
+
+  .fiscal-sponsor-logo {
+    min-height: 180px;
+    margin-top: 8px;
+    padding: 28px;
   }
 
   .featured-product .left-info,
@@ -1261,6 +1371,26 @@ section.page-heading.edh-page-heading .header-text p {
 }
 
 @media (max-width: 767px) {
+  .email-list-popup {
+    padding: 10px;
+  }
+
+  .email-list-popup__dialog {
+    width: calc(100vw - 20px);
+    max-width: calc(100vw - 20px);
+    max-height: calc(100vh - 20px);
+    max-height: calc(100dvh - 20px);
+    padding: 18px 10px 14px;
+    border-radius: 14px;
+  }
+
+  .email-list-popup__close {
+    top: 8px;
+    right: 8px;
+    width: 34px;
+    height: 34px;
+  }
+
   .header-area .main-nav .menu-trigger {
     top: 30px;
   }
