@@ -1099,14 +1099,15 @@ section.page-heading.edh-page-heading .header-text p {
 
 .support-actions {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 10px;
   justify-content: flex-start;
   margin-top: auto;
 }
 
 .support-actions .support-card__button {
-  flex: 0 0 auto;
+  flex: 1 1 165px;
+  min-width: 0;
   margin-top: 0;
 }
 
@@ -1115,7 +1116,7 @@ section.page-heading.edh-page-heading .header-text p {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  width: auto;
+  width: 100%;
   min-height: 44px;
   padding-right: 22px;
   padding-left: 22px;
@@ -1479,7 +1480,7 @@ section.page-heading.edh-page-heading .header-text p {
   }
 
   .support-actions .support-card__button {
-    flex-basis: auto;
+    flex-basis: 100%;
   }
 
   .leader-card__photo img {
