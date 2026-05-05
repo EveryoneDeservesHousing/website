@@ -75,7 +75,7 @@
       event.preventDefault();
       $(this).toggleClass("active");
       $(this).attr("aria-expanded", $(this).hasClass("active") ? "true" : "false");
-      $(".header-area .nav").slideToggle(200);
+      $(".header-area").toggleClass("nav-open", $(this).hasClass("active"));
     });
   }
 
@@ -88,9 +88,9 @@
 
     event.preventDefault();
 
-    if ($(window).width() < 991) {
+    if ($(window).width() < 1200) {
       $(".menu-trigger").removeClass("active").attr("aria-expanded", "false");
-      $(".header-area .nav").slideUp(200);
+      $(".header-area").removeClass("nav-open");
     }
 
     $("html, body").animate({
